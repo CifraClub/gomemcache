@@ -92,7 +92,7 @@ func legalKey(key string) bool {
 		return false
 	}
 	for i := 0; i < len(key); i++ {
-		if key[i] <= ' ' || key[i] > 0x7e {
+		if key[i] <= ' ' || key[i] == 0x7F {
 			return false
 		}
 	}
